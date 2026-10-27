@@ -25,24 +25,24 @@
 // }
 
 
-int[] grades = { 4, 5, 3, 5, 4, 2 };
-for (int i = 0; i < grades.Length - 1; i++)
-{
-    for (int j = 0; j < grades.Length - 1 - i; j++)
-    {
-        if (grades[j] < grades[j + 1])
-        {
-            int temp = grades[j];
-            grades[j] = grades[j + 1];
-            grades[j + 1] = temp;
-        }
-    }
-}
+// int[] grades = { 4, 5, 3, 5, 4, 2 };
+// for (int i = 0; i < grades.Length - 1; i++)
+// {
+//     for (int j = 0; j < grades.Length - 1 - i; j++)
+//     {
+//         if (grades[j] < grades[j + 1])
+//         {
+//             int temp = grades[j];
+//             grades[j] = grades[j + 1];
+//             grades[j + 1] = temp;
+//         }
+//     }
+// }
 
-foreach (int grade in grades)
-{
-    Console.WriteLine(grade);
-}
+// foreach (int grade in grades)
+// {
+//     Console.WriteLine(grade);
+// }
 
 
 // int[] GenerateScheduleSlots(int lessonsCount)
@@ -80,3 +80,79 @@ foreach (int grade in grades)
 // }
 
 
+// int[] grades = { 4, 5, 3, 5, 4, 2 };
+// Array.Sort(grades);
+
+// foreach (int grade in grades)
+// {
+//     Console.WriteLine(grade);
+// }
+
+// //Задача А
+// int n = int.Parse(Console.ReadLine());
+// int[] squares = new int[n];
+// for (int i = 0; i < n; i++)
+// {
+//     squares[i] = (i + 1) * (i + 1);
+// }
+
+// foreach (int num in squares)
+//     Console.WriteLine(num);
+
+
+// //Задача Б
+// int[] numbers = { 5, -3, 8, -1, 0 };
+// for (int i = 0; i < numbers.Length; i++)
+// {
+//     if (numbers[i] < 0)
+//     {
+//         numbers[i] = 0;
+//     }
+// }
+
+// foreach (int num in numbers)
+//     Console.WriteLine(num);
+
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+// if (string.IsNullOrEmpty(surname)) {
+// Console.WriteLine("Фамилия не введена. Завершение работы.");
+// return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+// .OrderBy(_ => rnd.Next())
+// .Take(2)
+// .OrderBy(x => x)
+// .ToList();
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+// //Variant 4
+// int[] GenerateFibonacci(int n)
+// {
+//     int[] result = new int[n];
+//     result[0] = 1;
+//     result[1] = 1;
+
+//     for (int i = 2; i < n; i++)
+//     {
+//         result[i] = result[i - 1] + result[i - 2];
+//     }
+//     return result;
+// }
+
+// int[] numbers = GenerateFibonacci(10);
+// foreach (int num in numbers)
+// {
+//     Console.WriteLine(num);
+// }
+
+// Variant 8
+double[] temp = { 12.2, 16.7, -12.2, 5.2, -3.2 };
+for (int i = 0; i < temp.Length; i++)
+{
+    if (temp[i] < 0)
+        temp[i] = 0;
+}
+foreach (double t in temp)
+    Console.WriteLine(t);
